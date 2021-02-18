@@ -42,10 +42,15 @@ $("body").addClass("game-over");
 setTimeout(function(){
     $("body").removeClass("game-over");
     $("#level-title").text("Your Score was: " + level + " Press any key to restart!");
+    resetGame();
 },1000);
-gamePattern = [];
-gameStarted = false;
-level = 0;
+
+}
+
+function resetGame(){
+    gamePattern = [];
+    gameStarted = false;
+    level = 0;
 }
 
 function checkAnswer(userChosenColour){
